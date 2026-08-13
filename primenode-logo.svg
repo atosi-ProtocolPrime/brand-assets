@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Base Canvas -->
+  <rect width="120" height="120" rx="24" fill="#1A1A1D" />
+  
+  <!-- Node Connections (Vapor Gray) -->
+  <line x1="40" y1="30" x2="40" y2="90" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/>
+  <line x1="40" y1="30" x2="80" y2="30" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/>
+  <line x1="80" y1="30" x2="80" y2="60" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/>
+  <line x1="80" y1="60" x2="40" y2="60" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/>
+  <line x1="80" y1="30" x2="95" y2="15" stroke="#E6E6E6" stroke-width="4" stroke-linecap="round"/>
+  <line x1="40" y1="90" x2="25" y2="105" stroke="#E6E6E6" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Outer Nodes (Vapor Gray) -->
+  <circle cx="40" cy="30" r="5" fill="#E6E6E6" />
+  <circle cx="80" cy="30" r="5" fill="#E6E6E6" />
+  <circle cx="80" cy="60" r="5" fill="#E6E6E6" />
+  <circle cx="40" cy="90" r="5" fill="#E6E6E6" />
+  
+  <!-- Terminus Points (Vapor Gray) -->
+  <circle cx="95" cy="15" r="3" fill="#E6E6E6" />
+  <circle cx="25" cy="105" r="3" fill="#E6E6E6" />
+  
+  <!-- Core Prime Node (Electric Amethyst) -->
+  <circle cx="40" cy="60" r="12" fill="#9F5AFD" opacity="0.25" />
+  <circle cx="40" cy="60" r="7" fill="#9F5AFD" />
+</svg>

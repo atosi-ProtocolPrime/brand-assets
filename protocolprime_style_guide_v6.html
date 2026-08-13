@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@page {
+    size: A4;
+    margin: 15mm 15mm;
+    background-color: #1A1A1D;
+    @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        color: #A0A0A5;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 8pt;
+    }
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1A1A1D;
+    color: #E6E6E6;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.5;
+}
+h1, h2, h3 { color: #E6E6E6; font-weight: bold; margin-bottom: 0.4em; page-break-after: avoid; }
+h1 { font-size: 22pt; border-bottom: 2px solid #9F5AFD; padding-bottom: 6px; margin-top: 0; }
+h2 { font-size: 14pt; color: #9F5AFD; margin-top: 1.4em; border-left: 4px solid #9F5AFD; padding-left: 8px; page-break-after: avoid; }
+h3 { font-size: 11pt; color: #E6E6E6; margin-top: 0.8em; margin-bottom: 0.3em; page-break-after: avoid; }
+
+.mono {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #252529;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 9pt;
+}
+
+.pitch-box {
+    background-color: #252529;
+    border-left: 4px solid #9F5AFD;
+    padding: 12px 16px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    border-radius: 0 6px 6px 0;
+}
+
+.color-grid {
+    display: table;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.color-row {
+    display: table-row;
+}
+.color-cell {
+    display: table-cell;
+    width: 25%;
+    padding: 6px;
+    text-align: left;
+    vertical-align: top;
+}
+.color-swatch {
+    width: 100%;
+    height: 48px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    border: 1px solid #333338;
+}
+
+.product-box {
+    background-color: #252529;
+    border-left: 4px solid #9F5AFD;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+    border-radius: 0 6px 6px 0;
+}
+.product-title {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #9F5AFD;
+    margin-bottom: 4px;
+}
+
+.code-block {
+    background-color: #252529;
+    border: 1px solid #333338;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 8pt;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    page-break-inside: avoid;
+    color: #00E5FF;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.logo-container {
+    text-align: center;
+    margin: 12px 0;
+    padding: 16px;
+    background-color: #252529;
+    border-radius: 8px;
+    border: 1px solid #333338;
+    page-break-inside: avoid;
+}
+
+.guideline-box {
+    background: rgba(159, 90, 253, 0.08);
+    border: 1px solid #333338;
+    border-left: 4px solid #9F5AFD;
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 12px;
+    page-break-inside: avoid;
+}
+.guideline-box ul {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-left: 20px;
+}
+.guideline-box li {
+    margin-bottom: 4px;
+}
+</style>
+</head>
+<body>
+    <h1>>_ ProtocolPrime | Style Guide v6</h1>
+    
+    <div class="pitch-box">
+        <strong>Brand Pitch & Positioning:</strong><br/>
+        Intelligent, componentized tools built for complex workflows and human connection.
+    </div>
+
+    <h2>1. Visual Identity & Color Tokens</h2>
+    <div class="color-grid">
+        <div class="color-row">
+            <div class="color-cell">
+                <div class="color-swatch" style="background-color: #1A1A1D;"></div>
+                <div class="mono">#1A1A1D</div>
+                <div><strong>Obsidian Slate</strong><br/><span style="font-size: 8pt; color: #A0A0A5;">Base Canvas</span></div>
+            </div>
+            <div class="color-cell">
+                <div class="color-swatch" style="background-color: #252529;"></div>
+                <div class="mono">#252529</div>
+                <div><strong>Surface Grey</strong><br/><span style="font-size: 8pt; color: #A0A0A5;">Card / Surface</span></div>
+            </div>
+            <div class="color-cell">
+                <div class="color-swatch" style="background-color: #E6E6E6;"></div>
+                <div class="mono">#E6E6E6</div>
+                <div><strong>Vapor Gray</strong><br/><span style="font-size: 8pt; color: #A0A0A5;">Primary Text</span></div>
+            </div>
+            <div class="color-cell">
+                <div class="color-swatch" style="background-color: #A0A0A5;"></div>
+                <div class="mono">#A0A0A5</div>
+                <div><strong>Muted Gray</strong><br/><span style="font-size: 8pt; color: #A0A0A5;">Secondary Text</span></div>
+            </div>
+        </div>
+        <div class="color-row">
+            <div class="color-cell">
+                <div class="color-swatch" style="background-color: #9F5AFD;"></div>
+                <div class="mono">#9F5AFD</div>
+                <div><strong>Electric Amethyst</strong><br/><span style="font-size: 8pt; color: #A0A0A5;">Primary Action/Accent</span></div>
+            </div>
+            <div class="color-cell">
+                <div class="color-swatch" style="background-color: #00E5FF;"></div>
+                <div class="mono">#00E5FF</div>
+                <div><strong>Cyber Teal</strong><br/><span style="font-size: 8pt; color: #A0A0A5;">Data / Tech Accent</span></div>
+            </div>
+            <div class="color-cell">
+                <div class="color-swatch" style="background-color: #EE2A35;"></div>
+                <div class="mono">#EE2A35</div>
+                <div><strong>Critical Crimson</strong><br/><span style="font-size: 8pt; color: #A0A0A5;">Alerts / Destructive</span></div>
+            </div>
+            <div class="color-cell">
+                <div class="color-swatch" style="background-color: #333338;"></div>
+                <div class="mono">#333338</div>
+                <div><strong>Border Charcoal</strong><br/><span style="font-size: 8pt; color: #A0A0A5;">Subtle Borders</span></div>
+            </div>
+        </div>
+    </div>
+
+    <h2>2. Typography Stack</h2>
+    <ul>
+        <li><strong>Primary UI Typeface (Geist / Inter):</strong> Sleek, modern interface headings, navigation, labels, and body copy.</li>
+        <li><strong>Secondary Data Typeface (JetBrains Mono):</strong> Data layers, code blocks, user/session IDs, logs, and JSON payloads.</li>
+    </ul>
+
+    <h2>3. The "Prime Node" Logo & Vector Source</h2>
+    <p>A scalable vector graphic (SVG) designed to function seamlessly as an app icon, favicon, or brand anchor across web and desktop UI environments.</p>
+    
+    <div class="logo-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100" height="100">
+          <rect width="120" height="120" rx="24" fill="#1A1A1D" />
+          <line x1="40" y1="30" x2="40" y2="90" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/>
+          <line x1="40" y1="30" x2="80" y2="30" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/>
+          <line x1="80" y1="30" x2="80" y2="60" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/>
+          <line x1="80" y1="60" x2="40" y2="60" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/>
+          <line x1="80" y1="30" x2="95" y2="15" stroke="#E6E6E6" stroke-width="4" stroke-linecap="round"/>
+          <line x1="40" y1="90" x2="25" y2="105" stroke="#E6E6E6" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="40" cy="30" r="5" fill="#E6E6E6" />
+          <circle cx="80" cy="30" r="5" fill="#E6E6E6" />
+          <circle cx="80" cy="60" r="5" fill="#E6E6E6" />
+          <circle cx="40" cy="90" r="5" fill="#E6E6E6" />
+          <circle cx="95" cy="15" r="3" fill="#E6E6E6" />
+          <circle cx="25" cy="105" r="3" fill="#E6E6E6" />
+          <circle cx="40" cy="60" r="12" fill="#9F5AFD" opacity="0.25" />
+          <circle cx="40" cy="60" r="7" fill="#9F5AFD" />
+        </svg>
+    </div>
+
+    <p><strong>Raw SVG Code Block (For Implementation):</strong></p>
+    <div class="code-block">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120"&gt;
+  &lt;rect width="120" height="120" rx="24" fill="#1A1A1D" /&gt;
+  &lt;line x1="40" y1="30" x2="40" y2="90" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/&gt;
+  &lt;line x1="40" y1="30" x2="80" y2="30" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/&gt;
+  &lt;line x1="80" y1="30" x2="80" y2="60" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/&gt;
+  &lt;line x1="80" y1="60" x2="40" y2="60" stroke="#E6E6E6" stroke-width="8" stroke-linecap="round"/&gt;
+  &lt;line x1="80" y1="30" x2="95" y2="15" stroke="#E6E6E6" stroke-width="4" stroke-linecap="round"/&gt;
+  &lt;line x1="40" y1="90" x2="25" y2="105" stroke="#E6E6E6" stroke-width="4" stroke-linecap="round"/&gt;
+  &lt;circle cx="40" cy="30" r="5" fill="#E6E6E6" /&gt;
+  &lt;circle cx="80" cy="30" r="5" fill="#E6E6E6" /&gt;
+  &lt;circle cx="80" cy="60" r="5" fill="#E6E6E6" /&gt;
+  &lt;circle cx="40" cy="90" r="5" fill="#E6E6E6" /&gt;
+  &lt;circle cx="95" cy="15" r="3" fill="#E6E6E6" /&gt;
+  &lt;circle cx="25" cy="105" r="3" fill="#E6E6E6" /&gt;
+  &lt;circle cx="40" cy="60" r="12" fill="#9F5AFD" opacity="0.25" /&gt;
+  &lt;circle cx="40" cy="60" r="7" fill="#9F5AFD" /&gt;
+&lt;/svg&gt;</div>
+
+    <h2>4. App Branding & Sub-Brand Strategy</h2>
+    <div class="guideline-box">
+        <p>A branded house approach maintains a unified corporate identity across the entire portfolio:</p>
+        
+        <h3>Phase 1: Master Brand Lockup (Current Standard)</h3>
+        <ul>
+            <li><strong>Structure:</strong> All products utilize the identical "Prime Node" parent logo icon to maximize brand recognition and equity.</li>
+            <li><strong>Typography Lockup:</strong> The primary logo icon is paired directly with the sub-brand name (e.g., "PrimeTrack", "PrimeCapture", "PrimeConnect") set in <strong>Geist</strong>.</li>
+            <li><strong>Strategy:</strong> Establishes a cohesive enterprise ecosystem, reassuring users that all tools share the same security, performance, and UI standards.</li>
+        </ul>
+
+        <h3>Phase 2: Color-Coded Domain Ecosystem (Future Roadmap)</h3>
+        <ul>
+            <li><strong>Structure:</strong> The geometric structure of the Prime Node icon remains strictly uniform across all products.</li>
+            <li><strong>Domain Accents:</strong> The central node's accent color shifts based on product domain (e.g., <strong>Electric Amethyst</strong> for PrimeTrack, <strong>Cyber Teal</strong> for PrimeCapture, Warm Accent for PrimeConnect).</li>
+            <li><strong>Strategy:</strong> Gives sub-brands distinct visual identities while keeping them clearly tied to the master ProtocolPrime platform.</li>
+        </ul>
+    </div>
+
+    <h2>5. Product Ecosystem Portfolio</h2>
+    <div class="product-box">
+        <div class="product-title">PrimeTrack</div>
+        <div><strong>Domain:</strong> Language & Localization (l10n).</div>
+        <div style="margin-top: 4px;"><strong>Core Focus:</strong> Complex localization project management, timeline tracking, resource orchestration, and translation memory/workflow pipelines.</div>
+        <div style="margin-top: 4px;"><strong>Architectural Rule:</strong> Enforce strict i18n/l10n data isolation. Abstract string repositories from presentation logic. All dates, timestamps, currencies, and metric units must support dynamic locale formatting.</div>
+    </div>
+    <div class="product-box">
+        <div class="product-title">PrimeCapture</div>
+        <div><strong>Domain:</strong> IT & Precision Capture Utility.</div>
+        <div style="margin-top: 4px;"><strong>Core Focus:</strong> Lightweight, low-latency, high-precision screen capture, image annotation, and automated API publishing/upload execution.</div>
+        <div style="margin-top: 4px;"><strong>Architectural Rule:</strong> Maximize speed and minimize memory footprint. Decouple OS-level screen capture hooks, clipboard interaction, and network upload threads. Execute asynchronous background tasks without blocking UI loops.</div>
+    </div>
+    <div class="product-box">
+        <div class="product-title">PrimeConnect</div>
+        <div><strong>Domain:</strong> AI & Human Connection Platform.</div>
+        <div style="margin-top: 4px;"><strong>Core Focus:</strong> Universal cross-platform AI icebreaker and connection facilitator for social, platonic, and professional onboarding contexts.</div>
+        <div style="margin-top: 4px;"><strong>Architectural Rule:</strong> Enforce strict real-time privacy and payload encryption. Isolate AI prompt engineering, context evaluation engines, and dynamic topic generators from the client display layer.</div>
+    </div>
+
+    <h2>6. Implementation / CSS Design Tokens API</h2>
+    <div class="code-block">:root {
+  /* Core Brand Colors */
+  --pp-bg-obsidian: #1A1A1D;     /* Main Canvas */
+  --pp-bg-surface: #252529;      /* Containers & Cards */
+  --pp-text-vapor: #E6E6E6;      /* Primary Text */
+  --pp-text-muted: #A0A0A5;      /* Secondary Text */
+  --pp-accent-amethyst: #9F5AFD; /* Primary Brand Action */
+  --pp-tech-teal: #00E5FF;       /* Data Stream Accent */
+  --pp-alert-crimson: #EE2A35;    /* Destructive / Alerts */
+  --pp-border-subtle: #333338;   /* Subtle Borders */
+
+  /* Typography Stack */
+  --pp-font-ui: 'Geist', 'Inter', sans-serif;
+  --pp-font-code: 'JetBrains Mono', 'Fira Code', monospace;
+}</div>
+
+    <h2>7. Architecture & AI System Prompt Link</h2>
+    <p>For detailed software architecture standards, modular component guidelines, i18n/l10n directives, and AI code generation rules, refer to the master system prompt document: <span class="mono">protocolprime_ai_dev_prompt.md</span>.</p>
+
+</body>
+</html>
